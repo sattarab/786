@@ -6,7 +6,7 @@ sequelize = null,
 db = {};
     
 /* replace HEROKU_URL with your heroku url */
-if (process.env.HEROKU_URL){
+if (process.env.HEROKU_POSTGRESQL_BLUE_URL){
     var match = process.env.HEROKU_URL.match(/postgres:\/\/([^:]+):([^@]+)@([^:]+):(\d+)\/(.+)/);
  
     sequelize = new Sequelize(match[5], match[1], match[2], {
